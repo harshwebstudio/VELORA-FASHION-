@@ -123,3 +123,62 @@ function openWhatsApp(productName = "your collection") {
     background: rgba(5, 5, 5, 0.96);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
              }
+// ================= GALLERY LIGHTBOX =================
+
+const galleryLightbox =
+    document.getElementById("galleryLightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+
+function openGallery(imagePath) {
+
+    if (!galleryLightbox || !lightboxImage) {
+        return;
+    }
+
+    lightboxImage.src = imagePath;
+
+    galleryLightbox.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeGallery() {
+
+    if (!galleryLightbox) {
+        return;
+    }
+
+    galleryLightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+// Close when clicking outside the image
+
+if (galleryLightbox) {
+
+    galleryLightbox.addEventListener("click", (event) => {
+
+        if (event.target === galleryLightbox) {
+            closeGallery();
+        }
+
+    });
+
+}
+
+
+// Close with Escape key
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+        closeGallery();
+    }
+
+});
