@@ -966,3 +966,151 @@ img {
     }
 
 }
+/* ================= STORE CONTACT ================= */
+
+.store-contact {
+    padding: 120px 0;
+    background: #151515;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.store-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-card {
+    display: flex;
+    gap: 18px;
+    padding: 24px;
+    border: 1px solid #292929;
+    background: #101010;
+    transition: 0.3s ease;
+}
+
+.detail-card:hover {
+    border-color: #555;
+    transform: translateX(5px);
+}
+
+.detail-icon {
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.detail-card small {
+    display: block;
+    color: #777;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.detail-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+
+.detail-card p {
+    color: #898989;
+    font-size: 0.78rem;
+}
+
+.store-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.store-btn {
+    min-height: 52px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #333;
+    background: #101010;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.store-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.primary-store-btn {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.primary-store-btn:hover {
+    background: #ddd;
+}
+
+.map-container {
+    min-height: 500px;
+    overflow: hidden;
+    border: 1px solid #292929;
+    background: #101010;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border: 0;
+    display: block;
+}
+
+
+/* ================= CONTACT MOBILE ================= */
+
+@media (max-width: 850px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .map-container iframe {
+        min-height: 380px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .store-contact {
+        padding: 80px 0;
+    }
+
+    .store-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-card {
+        padding: 20px;
+    }
+
+}
